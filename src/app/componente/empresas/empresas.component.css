@@ -1,0 +1,19 @@
+.container-fluid{
+  margin-top: 50px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.row{
+  margin-bottom: 20px;
+}
+.card{
+  border-radius: 15px;
+  margin-bottom: 20px;
+  transition: background-color 1s  ease-in;
+}
+
+.card img{
+  border-radius: 15px;
+}
+

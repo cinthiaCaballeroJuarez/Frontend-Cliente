@@ -1,0 +1,83 @@
+
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="../../../assets/img/productos/banner1..png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+         <!-- <b><p class="bannerDescripcion">Some representative placeholder content for the first slide.</p></b>-->
+      </div>
+
+    </div>
+    </div>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-12">
+        <button class="btnOrden">Finalizar Orden</button>
+      </div>
+    </div>
+  </div>
+
+
+<div class="container-md">
+  <div class="row ">
+    <div class=" col-xs-6 d-flex justify-content-center col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-8">
+      <div class="card " style="width:18rem">
+        <img src="../../../assets/img/productos/piza.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Pizza con peperoni</h5>
+          <p class="card-text">Descripción:$120</p>
+          <p class="card-text">Precio:$120</p>
+          <button (click)="modalCantProduct(ProductoSelect)" class="btnCompra"><fa-icon [icon]="faShoppingCart"></fa-icon></button>
+
+        </div>
+      </div>
+
+    </div>
+
+
+    </div>
+  </div>
+
+<!--ventanaModal de cantidad de producto seleccionado-->
+
+
+<ng-template #ProductoSelect let-modal>
+  <div class="modal-header modalProducto">
+    <h4 class="modal-title" id="modal-basic-title">Cantidad de producto a pedir</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body modalProducto">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center ">
+            <img class="imgProducto mr-3" src="../../../assets/img/productos/piza.png" alt="">
+              <div>
+              <h4>Pizza Peperroni</h4>
+              <p>precio:$120</p>
+              <p>descripción: Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <label for=""><h6>Ingrese la cantidad a pedir del producto</h6></label>
+          <input class="form-control" type="text" placeholder="Ingrese cantidad de producto">
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="modal-footer modalProducto">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Añadir Producto</button>
+  </div>
+</ng-template>

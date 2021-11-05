@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+.colorNavar{
+  background-color: #F28B28;
+}
+.faUser{
+  color: black;
+}
+.btn-outline-success {
+  color: #BAC6F0;
+  border-color: #BAC6F0;
+  border-radius: 180px;
+  background-color: #BAC6F0;
+
+}
+
+
+.btn-outline{
+  color: #BAC6F0;
+  border-color: #BAC6F0;
+  border-radius: 180px;
+  background-color: #BAC6F0;
+
+}
+
+.footer{
+  background-color: #F28B28;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+}

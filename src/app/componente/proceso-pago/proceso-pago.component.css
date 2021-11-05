@@ -1,0 +1,75 @@
+
+.formularioPago p{
+  text-align: center;
+  margin-top:8% ;
+  margin-bottom: 8%;
+}
+
+.formularioPago{
+  width: 380px;
+  padding: 20px;
+   margin: auto;
+   margin-top: 50px;
+   margin-bottom: 100px;
+   box-shadow:  0 0 30px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+   background-color: white;
+
+ }
+
+ .form-control{
+   margin-bottom: 2;
+   background: #f2f2f2 !important;
+ }
+
+ .btn{
+   background-color: #F28B28;
+  margin-top: 20%;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+
+ }
+
+
+ #cuerpo{
+   background-color: #BAC6F0;
+ }
+
+
+.error{
+  color: red;
+  margin: 0px;
+  font-size: .9rem;
+
+}
+
+.errorInput{
+  border-color: red;
+  box-shadow: 0,0,15px red;
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgb(#F28B28 / 25%) !important ;
+
+}
+
+.faCheckCircle
+{
+  font-size: 100px;
+  color: #BAC6F0;
+  margin-left: 160px;
+}
+
+.btn-exito{
+  background-color: #F28B28;
+ color: white;
+ padding-left: 30px;
+ padding-right: 30px;
+ display: flex;
+
+}

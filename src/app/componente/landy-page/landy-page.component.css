@@ -1,0 +1,25 @@
+
+.banner{
+  background: linear-gradient(#F28B28,#BAC6F0);
+}
+.container-md{
+  margin-top: 50px;
+  margin-bottom: 100px;
+  justify-content: center;
+}
+.row{
+  margin-bottom: 20px;
+}
+.card{
+  border-radius: 15px;
+  background-color: #BAC6F0 !important;
+  margin-bottom: 20px;
+}
+
+.card img{
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+
+

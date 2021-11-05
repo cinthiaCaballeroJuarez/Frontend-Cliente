@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body id="cuerpo">
+
+  <form class="formularioPago" [formGroup]="FormularioPago" >
+
+    <p> Ingrese los datos siguientes para realizar la entrega de sus productos</p>
+
+    <label for="">Ingrese dirección de destino:</label><br>
+    <input class="form-control"  [ngClass]="{'errorInput': destino?.invalid && (destino?.dirty || destino?.touched)}" formControlName="destino" required type="text" placeholder="Ejemplo col.uvas" aria-label="default input example">
+    <div *ngIf="destino?.invalid && (destino?.dirty || destino?.touched )" class="error">
+      <div *ngIf="destino?.errors?.required">campo obligatorio</div>
+      <div *ngIf="destino?.errors?.pattern">Solo se aceptan letras</div>
+
+    </div>
+
+    <label for="">Referencia del lugar:</label>
+    <input class="form-control" [ngClass]="{'errorInput': referencia?.invalid && (referencia?.dirty || referencia?.touched)}" formControlName="referencia" required type="text" placeholder="Ejemplo Pulperia Tres hermanos" aria-label="default input example">
+    <div *ngIf="referencia?.invalid && (referencia?.dirty || referencia?.touched)" class="error">
+      <div *ngIf="referencia?.errors?.required">campo obligatorio</div>
+      <div *ngIf="referencia?.errors?.pattern">Solo se aceptan letras</div>
+    </div>
+
+    <label for="">Numero de telefono:</label>
+    <input class="form-control" [ngClass]="{'errorInput': telefono?.invalid && (telefono?.dirty || telefono?.touched)}"  formControlName="telefono" required type="text" placeholder="" aria-label="default input example">
+    <div *ngIf="telefono?.invalid && (telefono?.dirty || telefono?.touched)" class="error">
+      <div *ngIf="telefono?.errors?.required">campo obligatorio</div>
+      <div *ngIf="telefono?.errors?.pattern">solo se aceptan numeros</div>
+    </div>
+
+    <h6 class="card-credit pt-3 pb-3">Targeta Credito</h6>
+    <div class="row">
+      <div class="col-6">
+
+        <label for="">Nombre:</label>
+        <input  class="form-control" [ngClass]="{'errorInput': nombre?.invalid && (nombre?.dirty || nombre?.touched)}"  formControlName="nombre" required type="text" placeholder="" aria-label="default input example">
+        <div *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)" class="error">
+          <div *ngIf="nombre?.errors?.required">campo obligatorio</div>
+          <div *ngIf="nombre?.errors?.maxlength">caracteres maximo es de 15</div>
+          <div *ngIf="nombre?.errors?.pattern">Solo se aceptan letras</div>
+        </div>
+      </div>
+
+      <div class="col-6">
+
+        <label for="">Apellido:</label>
+        <input class="form-control" [ngClass]="{'errorInput': apellido?.invalid && (apellido?.dirty || apellido?.touched)}"  formControlName="apellido" required type="text" placeholder="" aria-label="default input example">
+        <div *ngIf="apellido?.invalid && (apellido?.dirty || apellido?.touched)" class="error">
+          <div *ngIf="apellido?.errors?.required">campo obligatorio</div>
+          <div *ngIf="apellido?.errors?.maxlength">caracteres maximos es de 15</div>
+          <div *ngIf="apellido?.errors?.pattern">Solo se aceptan letras</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+
+        <label for="">Numero Targeta:</label>
+        <input  class="form-control" [ngClass]="{'errorInput': numeroTargeta?.invalid && (numeroTargeta?.dirty || numeroTargeta?.touched)}"  formControlName="numeroTargeta" required type="text" placeholder="" aria-label="default input example">
+        <div *ngIf="numeroTargeta?.invalid && (numeroTargeta?.dirty || numeroTargeta?.touched)" class="error">
+          <div *ngIf="numeroTargeta?.errors?.required">campo obligatorio</div>
+          <div *ngIf="numeroTargeta?.errors?.maxlength">tamaño maximo es de 15 numeros</div>
+          <div *ngIf="numeroTargeta?.errors?.pattern">solo se aceptan numeros</div>
+        </div>
+      </div>
+
+      <div class="col-6">
+
+        <label for="">Codigo seguridad:</label>
+        <input class="form-control" [ngClass]="{'errorInput': codigoSeguridad?.invalid && (codigoSeguridad?.dirty || codigoSeguridad?.touched)}"  formControlName="codigoSeguridad" required type="text" placeholder="" aria-label="default input example">
+        <div *ngIf="codigoSeguridad?.invalid && (codigoSeguridad?.dirty || codigoSeguridad?.touched) " class="error">
+          <div *ngIf="codigoSeguridad?.errors?.required">campo obligatorio</div>
+          <div *ngIf="codigoSeguridad?.errors?.maxlength">Solo acepta 4 caracteres</div>
+          <div *ngIf="codigoSeguridad?.errors?.pattern">solo se aceptan numeros</div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <label for="">Expiración:</label>
+        <input class="form-control" [ngClass]="{'errorInput': expiracion?.invalid && (expiracion?.dirty || expiracion?.touched)}"  formControlName="expiracion" required type="date" placeholder="" aria-label="default input example">
+        <div *ngIf="expiracion?.invalid && (expiracion?.dirty || expiracion?.touched)" class="error">
+          <div *ngIf="expiracion?.errors?.required">campo obligatorio</div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-6">
+        <button class="btn">Cerrar</button>
+
+      </div>
+
+      <div class="col-6">
+        <button [disabled]="!FormularioPago.valid" (click)="exito(idModalAgradecimiento)" class="btn ml-auto">Comprar</button>
+
+      </div>
+    </div>
+
+  </form>
+
+
+  <!--Mensaje de agradecimiento-->
+  <ng-template #idModalAgradecimiento let-modal>
+    <div class="modal-body">
+      <div style=" margin: auto;">
+        <fa-icon class="faCheckCircle"   [icon]="faCheckCircle"></fa-icon>
+      </div>
+      <p style="text-align: center;"><b>Su orden fue realizada con exito gracias por usar nuestro servicio...</b></p>
+
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-exito btn-outline-dark" (click)="modal.close('Save click')">Cerrar</button>
+    </div>
+  </ng-template>
+
+
+</body>
+</html>

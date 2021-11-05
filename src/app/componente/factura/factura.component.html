@@ -1,0 +1,159 @@
+
+<div>
+  <h3 class="title">DETALLE DE LA ORDEN</h3>
+
+</div>
+<div class="container">
+
+  <div class="row">
+    <div class="col-6">
+      <p class="detalle pl-3">Orden #1</p>
+    </div>
+    <div class="col-6">
+      <p class="detalle">N° productos en carrito:</p>
+    </div>
+  </div>
+
+  <!--Encabezados de tabla-->
+  <div class="row barra d-flex justify-content-center">
+    <div class="col-2">
+      <b>Nombre Producto</b>
+    </div>
+    <div class="col-2 espacios ">
+    <b>  Precio</b>
+    </div>
+    <div class="col-2 espacios">
+     <b> Cantidad</b>
+    </div>
+    <div class="col-2 espacios1 ">
+     <b> ISV</b>
+    </div>
+    <div class="col-2 espacios">
+     <b> Total</b>
+    </div>
+
+  </div>
+
+  <!--Detalle de tabla-->
+  <div class="detalleCompra">
+    <div class="row rowDetalle d-flex justify-content-center">
+      <div class="col-2 espacios ">
+          pizza peperoni
+      </div>
+      <div class="col-2 espacios">
+          159.00
+      </div>
+      <div class="col-2 espacios">
+          2
+      </div>
+      <div class="col-2 espacios1">
+          47,7
+      </div>
+      <div class="col-2 espacios ">
+         <span> 365,7  <button class="btn"><fa-icon [icon]="faTimes"></fa-icon></button></span>
+      </div>
+    </div>
+
+    <!--fila dos-->
+    <div class="row rowDetalle d-flex justify-content-center">
+      <div class="col-2 espacios ">
+          pizza peperoni
+      </div>
+      <div class="col-2 espacios">
+          159.00
+      </div>
+      <div class="col-2 espacios">
+          2
+      </div>
+      <div class="col-2 espacios1">
+          47,7
+      </div>
+      <div class="col-2 espacios ">
+          365,7  <button class="btn"><fa-icon [icon]="faTimes"></fa-icon></button>
+      </div>
+    </div>
+
+  </div>
+
+  <!--subTotal-->
+  <div class="row">
+      <div class="col-6">
+
+      </div>
+
+      <div class="col-6" style="float:right;">
+          <div class="row rowDetalle">
+            <div class="col-6" style=" text-align: center;">
+             <b> SubTotal:</b>
+
+            </div>
+
+            <div class="col-6" style=" text-align: center;">
+              820
+
+            </div>
+
+          </div>
+
+      </div>
+
+
+  </div>
+  <!--Cargo Por entrega-->
+  <div class="row">
+    <div class="col-6">
+
+    </div>
+
+    <div class="col-6">
+        <div class="row rowDetalle">
+          <div class="col-6" style=" text-align: center;">
+           <b> Cargo Entrega:</b>
+
+          </div>
+
+          <div class="col-6" style=" text-align: center;">
+            820
+
+          </div>
+
+        </div>
+
+    </div>
+
+
+  </div>
+
+<!--Total-->
+  <div class="row">
+    <div class="col-6">
+
+    </div>
+
+    <div class="col-6">
+        <div class="row rowDetalle">
+          <div class="col-6" style=" text-align: center;">
+          <b>  Total:</b>
+
+          </div>
+
+          <div class="col-6" style=" text-align: center;">
+
+              1000
+          </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+</div>
+
+<div>
+  <button type="button" class="btn btnProcesarOrden ">Procesar Orden</button>
+</div>
